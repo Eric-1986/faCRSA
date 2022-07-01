@@ -8,7 +8,7 @@ faCRSA has been tested under Ubuntu 18.04 LTS, CentOS 7, macOS 12 Monterey, and 
 ##### 1. Install faCRSA from PyPI
 ```pyt
 # Create a clear environment for faCRSA
-conda -create -n facrsa python=3.6.0
+conda create -n facrsa python=3.6.0
 conda activate facrsa
 
 # Install faCRSA
