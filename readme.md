@@ -3,7 +3,7 @@
   * [Use faCRSA webserver](#use-facrsa-webserver)
   * [Deploy faCRSA in a private environment](#deploy-facrsa-in-a-private-environment)
     + [1. Installation and launcher](#1-installation-and-launcher)
-      - [1.1 Install with Conda (Recommended)](#11-install-with-conda--recommended-)
+      - [1.1 Install with Conda (Recommended)](#11-install-with-conda--recommended)
         * [1.1.1 Install faCRSA from PyPI](#111-install-facrsa-from-pypi)
         * [1.1.2 Launch faCRSA](#112-launch-facrsa)
         * [1.1.3 Open web page](#113-open-web-page)
