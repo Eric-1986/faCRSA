@@ -84,6 +84,7 @@ Copy the URL address (e.g. http://127.0.0.1:5000/) output from the cmd window an
 
 ### 2. faCRSA initialization
 When you visit the web page for the first time, it will automatically jump to the initialization page. You can set  SMTP server information in this page, which used to notify task status. If you don't need this function, please click the following link to skip.
+
 ![image](https://user-images.githubusercontent.com/71422762/176860754-d8852989-2000-4419-82f0-e0e7a17cfbec.png)
 
 ## Usage
@@ -121,11 +122,7 @@ The deep learning model must be constructed by Kears in Tensorflow (code: <code>
 #### Development guide
 1. Plugin structure:
 - network.py: the deep learning model constructed in the Python programming language.
-<<<<<<< HEAD
-  
-=======
->>>>>>> af0e8c83531a7656088421324948e4752266c903
-  > This file must include a function named "main" without any parameters. 
+> This file must include a function named "main" without any parameters. 
 - weight.h5: model weight file (**must be .h5 format**)
 2. Package these files in zip format.
 - weight.h5: model weight file (**must be .h5 format**)
