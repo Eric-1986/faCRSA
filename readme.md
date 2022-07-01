@@ -23,6 +23,9 @@
       - [Development guide](#development-guide)
     + [2 Training model](#2-training-model)
   * [Contact](#contact)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 # faCRSA
 A fully automated pipeline for the high-throughput analysis of crop root system architecture. 
 ## Use faCRSA webserver
@@ -122,7 +125,7 @@ The deep learning model must be constructed by Kears in Tensorflow (code: <code>
 #### Development guide
 1. Plugin structure:
 - network.py: the deep learning model constructed in the Python programming language.
-> This file must include a function named "main" without any parameters. 
+ > This file must include a function named "main" without any parameters. 
 - weight.h5: model weight file (**must be .h5 format**)
 2. Package these files in zip format.
 - weight.h5: model weight file (**must be .h5 format**)
