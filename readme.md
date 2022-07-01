@@ -3,8 +3,8 @@
 A fully automated pipeline for the high-throughput analysis of crop root system architecture.
 
 ## Installation and launcher
-faCRSA has been tested under Ubuntu 18.04 LTS, CentOS 7, macOS 12 Monterey, and Windows 10 with Python 3.6.0. 
-⚠️**Before installing faCRSA, you must install Anaconda.**
+- faCRSA has been tested under Ubuntu 18.04 LTS, CentOS 7, macOS 12 Monterey, and Windows 10 with Python 3.6.0. 
+- ⚠️**Before installing faCRSA, you must install Anaconda.**
 ### Install with Conda (Recommended 😊)
 ##### 1. Install faCRSA from PyPI
 ```pyt
