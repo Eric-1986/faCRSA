@@ -23,9 +23,6 @@
       - [Development guide](#development-guide)
     + [2 Training model](#2-training-model)
   * [Contact](#contact)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 # faCRSA
 A fully automated pipeline for the high-throughput analysis of crop root system architecture. 
 ## Use faCRSA webserver
