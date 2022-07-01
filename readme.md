@@ -36,8 +36,7 @@ A fully automated pipeline for the high-throughput analysis of crop root system 
 ##### 1.1.1 Install faCRSA from PyPI
 ```pyt
 # Create a clear environment for faCRSA
-conda 
-create -n facrsa python=3.6.0
+conda create -n facrsa python=3.6.0
 conda activate facrsa
 
 # Install faCRSA
@@ -85,10 +84,6 @@ Copy the URL address (e.g. http://127.0.0.1:5000/) output from the cmd window an
 
 ### 2. faCRSA initialization
 When you visit the web page for the first time, it will automatically jump to the initialization page. You can set  SMTP server information in this page, which used to notify task status. If you don't need this function, please click the following link to skip.
-<<<<<<< HEAD
-
-=======
->>>>>>> 7dd1a061e326ed01d2320179395ecd86d55fab9e
 ![image](https://user-images.githubusercontent.com/71422762/176860754-d8852989-2000-4419-82f0-e0e7a17cfbec.png)
 
 ## Usage
@@ -125,19 +120,13 @@ tensorflow==2.4.0
 The deep learning model must be constructed by Kears in Tensorflow (code: <code>from tensorflow.keras.layers import *</code>).
 #### Development guide
 1. Plugin structure:
-	- network.py: the deep learning model constructed in the Python programming language.
-<<<<<<< HEAD
-	
-	  > This file must include a function named "main" without any parameters. 
-	
-	- weight.h5: model weight file (**must be .h5 format**)
-	
+- network.py: the deep learning model constructed in the Python programming language.
+  
+  > This file must include a function named "main" without any parameters. 
+- weight.h5: model weight file (**must be .h5 format**)
 2. Package these files in zip format.
-
-=======
-	- weight.h5: model weight file (**must be .h5 format**)
+- weight.h5: model weight file (**must be .h5 format**)
 2. Package these files in zip format.
->>>>>>> 7dd1a061e326ed01d2320179395ecd86d55fab9e
 3. Test the availability of each plugin and upload it to faCRSA.
 ### 2 Training model
 RootSeg could be trained for images from other crops and imaging backgrounds.
@@ -151,8 +140,4 @@ conda activate facrsa
 python training.py
 ```
 ## Contact
-<<<<<<< HEAD
 If you have any questions or suggestions, please contact Ruinan Zhang (2020801253@stu.njau.edu.cn) at Nanjing Agricultural University.
-=======
-If you have any questions or suggestions, please contact Ruinan Zhang (2020801253@stu.njau.edu.cn) at Nanjing Agricultural University.
->>>>>>> 7dd1a061e326ed01d2320179395ecd86d55fab9e
