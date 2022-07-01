@@ -35,23 +35,6 @@ layui.use('table', function () {
                 minWidth: 150,
                 sort: true
             }, {
-                field: 'status',
-                title: 'Status',
-                templet: function (d) {
-                    if (d.status == 1) {
-                        return ' <div class="badge bg-success bg-gradient rounded-pill mb-2">success</div>'
-                    }
-                    if (d.status == 2) {
-                        return ' <div class="badge bg-info bg-gradient rounded-pill mb-2">doing</div>'
-                    }
-                    if (d.status == 0) {
-                        return ' <div class="badge bg-danger bg-gradient rounded-pill mb-2">error</div>'
-                    }
-                },
-                align: 'center',
-                sort: true,
-                width: 100
-            }, {
                 fixed: 'right',
                 title: 'Action',
                 toolbar: '#barDemo',

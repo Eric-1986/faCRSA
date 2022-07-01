@@ -1,5 +1,12 @@
-#!E:\Anaconda\envs\t\python.exe
-
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+'''
+Author: Ruinan Zhang
+Version: v1.2
+LastEditTime: 2022-07-01 11:13:36
+E-mail: 2020801253@stu.njau.edu.cn
+Copyright (c) 2022 by Ruinan Zhang, All Rights Reserved. Licensed under the GPL v3.0.
+'''
 import logging
 import os
 import sys

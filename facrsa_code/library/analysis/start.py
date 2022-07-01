@@ -22,7 +22,7 @@ def start(conf, uid, tid):
     logging.info("task id: " + str(tid))
     try:
         analysis_single(conf, uid, tid)
-    except(AttributeError, OverflowError, IndexError, NameError) as e:
+    except(AttributeError, OverflowError, IndexError, NameError, TypeError) as e:
         msg = "Task execution failed. Please resubmit the task."
         send_mail_user(msg, conf)
         update_task_error(tid)

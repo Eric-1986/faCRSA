@@ -23,7 +23,8 @@
 <main class="flex-shrink-0">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container px-5">
-            <a class="navbar-brand" href="/"><img src="{{ url_for('static', filename = 'assets/favicon.ico') }}" width="36" height="36"/> faCRSA</a>
+            <a class="navbar-brand" href="/"><img src="{{ url_for('static', filename = 'assets/favicon.ico') }}"
+                                                  width="36" height="36"/> faCRSA</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation"><span
@@ -34,6 +35,8 @@
                     </li>
                     <li class="nav-item"><a class="nav-link" href="/faq"><i class="bi bi-question-circle"></i> FAQ</a>
                     </li>
+                    <li class="nav-item"><a class="nav-link" href="/install"><i class="bi bi-cloud-download"></i>
+                        Install</a></li>
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link" href="/addtask"><i class="bi bi-plus-circle"></i>
@@ -44,9 +47,12 @@
                                data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person"></i> My
                                 faCRSA</a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="/mytask"><i class="bi bi-list-task"></i> My Task</a></li>
-                                <li><a class="dropdown-item" href="/myplugin"><i class="bi bi-bezier"></i> My Plugin</a></li>
-                                <li><a class="dropdown-item" href="/setting"><i class="bi bi-gear"></i> Account Setting</a></li>
+                                <li><a class="dropdown-item" href="/mytask"><i class="bi bi-list-task"></i> My Task</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/myplugin"><i class="bi bi-bezier"></i> My Plugin</a>
+                                </li>
+                                <li><a class="dropdown-item" href="/setting"><i class="bi bi-gear"></i> Account Setting</a>
+                                </li>
                                 <hr>
                                 <li><a class="dropdown-item" href="/logout"><i class="bi bi-person"></i> LogOut</a></li>
                             </ul>
@@ -71,13 +77,17 @@
                     <br>
                     <b>
                         Regional Technique Innovation Center for
-                        Wheat Production. Nanjing, China
+                        Wheat Production, Nanjing Agricultural University. Nanjing, China
                     </b>
                 </div>
-
             </div>
             <div class="col-auto">
-                <img width="48" src="../../static/assets/njau.png" alt="NJAU">
+                <a href="http://www.njau.edu.cn/" rel="noopener" target="_blank"><img width="48" height="48"
+                                                                                      src="../../static/assets/njau.png"
+                                                                                      alt="NJAU"></a>
+                <a href="https://aiphenomics.com/" rel="noopener" target="_blank"><img width="53" height="48"
+                                                                                       src="../../static/assets/aiphenomics.png"
+                                                                                       alt="aiPhenomics"></a>
             </div>
         </div>
     </div>

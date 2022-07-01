@@ -17,6 +17,3 @@ def start_queue():
     os.chdir(current_path)
     cmd = "python huey_consumer.py task_queue.huey"
     subprocess.call(cmd, shell=True)
-
-if __name__ == '__main__':
-    start_queue()

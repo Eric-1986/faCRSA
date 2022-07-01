@@ -1,6 +1,8 @@
 {% extends 'public/base.html' %}
 {% block css %}
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'layui/css/layui.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/form-validation.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'css/sweetalert2.css') }}">
 {% endblock %}
 {% block index %}
     <section class="py-5">
@@ -79,6 +81,8 @@
 {% endblock %}
 {% block js %}
     <script src="{{ url_for('static', filename = 'js/vendors.min.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'js/jquery.validate.min.js') }}"></script>
     <script src="{{ url_for('static', filename = 'layui/layui.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'js/sweetalert2.all.min.js') }}"></script>
     <script src="{{ url_for('static', filename = 'js/page/setting.js') }}"></script>
 {% endblock %}

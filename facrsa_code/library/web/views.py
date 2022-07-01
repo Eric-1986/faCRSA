@@ -48,6 +48,10 @@ def faq_page():
     uid, user = get_info()
     return render_template('faq.html', uid=uid, user=user, title="FAQ")
 
+@app.route('/install')
+def install_page():
+    uid, user = get_info()
+    return render_template('install.html', uid=uid, user=user, title="Install")
 
 @app.route('/addtask')
 def add_task_page():
@@ -200,6 +204,9 @@ def error_date(error):
 
 
 def get_info():
-    uid = session.get('uid')
-    user = session.get('username')
-    return uid, user
+    try:
+        uid = session.get('uid')
+        user = session.get('username')
+        return uid, user
+    except BaseException as e:
+        print(e)

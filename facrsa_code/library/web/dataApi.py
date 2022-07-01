@@ -3,7 +3,7 @@
 '''
 Author: Ruinan Zhang
 Version: v1.2
-LastEditTime: 2022-07-01 09:38:23
+LastEditTime: 2022-07-01 12:20:29
 E-mail: 2020801253@stu.njau.edu.cn
 Copyright (c) 2022 by Ruinan Zhang, All Rights Reserved. Licensed under the GPL v3.0.
 '''
@@ -159,7 +159,6 @@ def user_reg():
 @app.route('/api/changeUserName', methods=['POST'])
 def change_user_name():
     if request.method == 'POST':  # 如果提交表单
-        # 从表单中获取字段
         username = request.form['username']
         uid = session.get('uid')
         sql = "UPDATE user SET username =" + "'%s'" % (str(username)) + "WHERE uid = " + "'%s'" % (str(uid))
@@ -301,8 +300,8 @@ def del_img_file(tid):
         return ({'code': 500, 'msg': 'Method not allowed'})
 
 
-@app.route('/uploadPlugin/<string:tid>', methods=['POST'])
-def upload_plugin_file(page_id):
+@app.route('/uploadPlugin/<string:pid>', methods=['POST'])
+def upload_plugin_file(pid):
     if request.method == 'POST':
         if 'file' not in request.files:
             return jsonify({'code': -1, 'filename': '', 'msg': 'No file part'})
@@ -311,18 +310,6 @@ def upload_plugin_file(page_id):
             return jsonify({'code': -1, 'filename': '', 'msg': 'No selected file'})
         else:
             try:
-                # 第一次上传文件，创建session['page_id']
-                if session.get('page_id') is None:
-                    session['page_id'] = page_id
-                # session不为none，说明已经添加过session
-                # session不为page_id，说明页面刷新过
-                if session.get('page_id') != page_id:
-                    # 重新获取
-                    session['page_id'] = page_id
-                    pid = str(uuid.uuid4())
-                    session['pid'] = pid
-                else:
-                    pid = session.get('pid')
                 user = session.get('uid')
                 plugin_path = get_config('storage')["plugin_path"] + "/" + str(user) + "/" + pid
                 if file and allowed_file(file.filename):
@@ -348,11 +335,11 @@ def upload_plugin_file(page_id):
         return jsonify({'code': -1, 'filename': '', 'msg': 'Method not allowed'})
 
 
-@app.route('/api/delPluginFile', methods=['POST'])
-def del_plugin_file():
+@app.route('/api/delPluginFile/<string:pid>', methods=['POST'])
+def del_plugin_file(pid):
     if request.method == 'POST':
-        plugin_path = get_config('storage')["plugin_path"] + "/" + str(session.get('uid')) + "/" + session.get(
-            'pid') + "/" + request.form['plugin']
+        plugin_path = get_config('storage')["plugin_path"] + "/" + str(session.get('uid')) + "/" + str(pid) + "/" + \
+                      request.form['plugin']
         try:
             os.remove(plugin_path)
             return jsonify({'code': 200, 'msg': ''})
@@ -363,12 +350,11 @@ def del_plugin_file():
         return ({'code': 500, 'msg': 'Method not allowed'})
 
 
-@app.route('/api/addPlugin', methods=['POST'])
-def add_plugin():
+@app.route('/api/addPlugin/<string:pid>', methods=['POST'])
+def add_plugin(pid):
     if request.method == 'POST':
         name = request.form['name']
         des = request.form['des']
-        pid = session.get('pid')
         uid = session.get('uid')
         create_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         sql = "INSERT INTO plugin(pid,plugin_name,description,create_time,uid) VALUES ('%s', '%s', '%s', '%s','%s')" % (
@@ -474,7 +460,7 @@ def skip_initial():
     with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), "install.lock"), "w") as f:
         f.write("installed")
     f.close()
-    return jsonify({"code": "ok"})
+    return redirect("/")
 
 
 def get_task_info(tid):

@@ -11,7 +11,7 @@ layui.use(['upload', 'element', 'layer'], function () {
         url: '/uploadImg/' + TID,
         accept: 'file',
         multiple: true,
-        number: 2,
+        number: 10,
         auto: true,
         drag: true,
         exts: 'jpg|png|jpeg|zip',

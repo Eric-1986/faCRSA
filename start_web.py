@@ -17,6 +17,3 @@ def start_web():
     os.chdir(current_path)
     cmd = "flask run"
     subprocess.call(cmd, shell=True)
-
-if __name__ == '__main__':
-    start_web()

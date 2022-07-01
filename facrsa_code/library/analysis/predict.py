@@ -7,6 +7,8 @@ LastEditTime: 2022-07-01 09:36:01
 E-mail: 2020801253@stu.njau.edu.cn
 Copyright (c) 2022 by Ruinan Zhang, All Rights Reserved. Licensed under the GPL v3.0.
 """
+import logging
+
 from PIL import Image
 import numpy as np
 import random
@@ -47,6 +49,7 @@ class imgPredict(object):
             self.model_b_m.load_weights(
                 os.path.dirname(os.path.abspath(__file__)) + "/net/rootseg/weight/" + model_file_b_m)
         else:
+            logging.info("Loading private plugin")
             self.model_b_m = importlib.import_module(
                 'facrsa_code.library.analysis.net.{}.{}.{}'.format(conf['uid'], conf['pid'], "network")).main()
             self.model_b_m.load_weights(

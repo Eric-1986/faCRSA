@@ -44,7 +44,7 @@ $("#changeUserName").click(function () {
                     success: function (result) {
                         if (result == 200) {
                             var sentence = "Success";
-                            successToastReg(sentence);
+                            successToast(sentence);
                         } else {
                             var sentence = 'Please try again later!';
                             errorToast(sentence);
@@ -87,7 +87,7 @@ $("#changePWD").click(function () {
                     success: function (result) {
                         if (result == 200) {
                             var sentence = "Success";
-                            successToastReg(sentence);
+                            successToast(sentence);
                         } else {
                             var sentence = 'Please try again later!';
                             errorToast(sentence);
@@ -145,6 +145,10 @@ function successToast(sentence) {
         title: sentence,
         timer: 2500,
         showCloseButton: true,
-        showConfirmButton: false
+        showConfirmButton: false,
+        willClose: () => {
+            window.location.href =
+                "/login";
+        }
     })
 }
