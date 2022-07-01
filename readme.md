@@ -121,7 +121,10 @@ The deep learning model must be constructed by Kears in Tensorflow (code: <code>
 #### Development guide
 1. Plugin structure:
 - network.py: the deep learning model constructed in the Python programming language.
+<<<<<<< HEAD
   
+=======
+>>>>>>> af0e8c83531a7656088421324948e4752266c903
   > This file must include a function named "main" without any parameters. 
 - weight.h5: model weight file (**must be .h5 format**)
 2. Package these files in zip format.
