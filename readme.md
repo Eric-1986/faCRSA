@@ -54,4 +54,6 @@ flask run
 ##### 4. Open web page
 Copy the URL address (http://127.0.0.1:5000/) output from the cmd window and open it in the browser.
 ## faCRSA initialization
-⚠️
+When you visit the web page for the first time, it will automatically jump to the initialization page. 
+![image](https://user-images.githubusercontent.com/71422762/176822473-615b8f13-6766-49b4-af35-dee5d3458b56.png)
+
