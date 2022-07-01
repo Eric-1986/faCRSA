@@ -1,11 +1,11 @@
 # faCRSA
 A fully automated pipeline for the high-throughput analysis of crop root system architecture. 
-
 ## Use faCRSA webserver
-❤️ Try faCRSA at https://root.aiphenomics.com/.
+❤️ Try faCRSA at https://root.aiphenomics.com/. You can see help documents about faCRSA usage on the Github page (Section 3. Usage) and at https://root.aiphenomics.com/faq.
 ## Deploy faCRSA in a private environment
 ### 1. Installation and launcher
 - faCRSA has been tested under Ubuntu 18.04 LTS, CentOS 7, macOS 12 Monterey, and Windows 10 with Python 3.6.0. 
+- Install with Conda or manually.
 - ⚠️**Before installing faCRSA, you must install Anaconda.**
 #### 1.1 Install with Conda (Recommended 😊)
 ##### 1. Install faCRSA from PyPI
@@ -61,5 +61,4 @@ Copy the URL address (http://127.0.0.1:5000/) output from the cmd window and ope
 When you visit the web page for the first time, it will automatically jump to the initialization page. You can set  SMTP server information in this page, which used to notify task status. If you don't need this function, please click the following link to skip.
 ![[Pasted image 20220701121713.png]]
 ### 3. Usage
-❤️ Try faCRSA at https://root.aiphenomics.com/.
 #### 3.1 
