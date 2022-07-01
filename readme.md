@@ -1,5 +1,5 @@
 # faCRSA
-A fully automated pipeline for the high-throughput analysis of crop root system architecture.
+A fully automated pipeline for the high-throughput analysis of crop root system architecture. ❤️ Try faCRSA at https://root.aiphenomics.com/.
 ## 1. Installation and launcher
 - faCRSA has been tested under Ubuntu 18.04 LTS, CentOS 7, macOS 12 Monterey, and Windows 10 with Python 3.6.0. 
 - ⚠️**Before installing faCRSA, you must install Anaconda.**
@@ -55,3 +55,6 @@ flask run
 Copy the URL address (http://127.0.0.1:5000/) output from the cmd window and open it in the browser.
 ## 2. faCRSA initialization
 When you visit the web page for the first time, it will automatically jump to the initialization page. You can set  SMTP server information in this page, which used to notify task status. If you don't need this function, please click the following link to skip.
+![[Pasted image 20220701121713.png]]
+## 3. Usage
+❤️ Try faCRSA at https://root.aiphenomics.com/.
