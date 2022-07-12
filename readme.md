@@ -36,7 +36,7 @@ A fully automated pipeline for the high-throughput analysis of crop root system 
 ##### 1.1.1 Install faCRSA from PyPI
 ```pyt
 # Create a clear environment for faCRSA
-conda create -n facrsa python=3.6.0
+conda create -n facrsa python=3.6
 conda activate facrsa
 
 # Install faCRSA
@@ -65,7 +65,7 @@ cd faCRSA
 ##### 1.2.2 Install Python requirements
 ```pyt
 # Create a clear environment for faCRSA
-conda create -n facrsa python=3.6.0
+conda create -n facrsa python=3.6
 conda activate facrsa
 
 # Install Python requirements
