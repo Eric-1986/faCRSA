@@ -3,7 +3,7 @@
   * [Use faCRSA webserver](#use-facrsa-webserver)
   * [Deploy faCRSA in a private environment](#deploy-facrsa-in-a-private-environment)
     + [1. Installation and launcher](#1-installation-and-launcher)
-      - [1.1 Install with Conda (Recommended)](#11-install-with-conda--recommended-)
+      - [1.1 Install with Conda (Recommended)](#11-install-with-conda--recommended)
         * [1.1.1 Install faCRSA from PyPI](#111-install-facrsa-from-pypi)
         * [1.1.2 Launch faCRSA](#112-launch-facrsa)
         * [1.1.3 Open web page](#113-open-web-page)
@@ -26,7 +26,7 @@
 # faCRSA
 A fully automated pipeline for the high-throughput analysis of crop root system architecture. 
 ## Use faCRSA webserver
-❤️ Try faCRSA at https://root.aiphenomics.com/. You can see help documents about faCRSA usage on the Github page (Section 3. Usage) and at https://root.aiphenomics.com/faq.
+❤️ Try faCRSA at https://facrsa.aiphenomics.com/. You can see help documents about faCRSA usage on the Github page (Section 3. Usage).
 ## Deploy faCRSA in a private environment
 ### 1. Installation and launcher
 - faCRSA has been tested under Ubuntu 18.04 LTS, CentOS 7, macOS 12 Monterey, and Windows 10 with Python 3.6.0. 
@@ -36,7 +36,7 @@ A fully automated pipeline for the high-throughput analysis of crop root system 
 ##### 1.1.1 Install faCRSA from PyPI
 ```pyt
 # Create a clear environment for faCRSA
-conda create -n facrsa python=3.6.0
+conda create -n facrsa python=3.6
 conda activate facrsa
 
 # Install faCRSA
@@ -49,6 +49,7 @@ facrsa-queue
 
 # Create a new cmd window
 # Launch faCRSA web
+conda activate facrsa
 facrsa-web
 ```
 ##### 1.1.3 Open web page
@@ -64,7 +65,7 @@ cd faCRSA
 ##### 1.2.2 Install Python requirements
 ```pyt
 # Create a clear environment for faCRSA
-conda create -n facrsa python=3.6.0
+conda create -n facrsa python=3.6
 conda activate facrsa
 
 # Install Python requirements
@@ -77,6 +78,7 @@ python huey_consumer.py task_queue.huey
 
 # Create a new cmd window
 # Launch faCRSA web
+conda activate facrsa
 flask run
 ```
 ##### 1.2.4. Open web page
@@ -84,6 +86,7 @@ Copy the URL address (e.g. http://127.0.0.1:5000/) output from the cmd window an
 
 ### 2. faCRSA initialization
 When you visit the web page for the first time, it will automatically jump to the initialization page. You can set  SMTP server information in this page, which used to notify task status. If you don't need this function, please click the following link to skip.
+
 ![image](https://user-images.githubusercontent.com/71422762/176860754-d8852989-2000-4419-82f0-e0e7a17cfbec.png)
 
 ## Usage
@@ -121,11 +124,7 @@ The deep learning model must be constructed by Kears in Tensorflow (code: <code>
 #### Development guide
 1. Plugin structure:
 - network.py: the deep learning model constructed in the Python programming language.
-<<<<<<< HEAD
-  
-=======
->>>>>>> af0e8c83531a7656088421324948e4752266c903
-  > This file must include a function named "main" without any parameters. 
+ > This file must include a function named "main" without any parameters. 
 - weight.h5: model weight file (**must be .h5 format**)
 2. Package these files in zip format.
 - weight.h5: model weight file (**must be .h5 format**)
