@@ -26,7 +26,7 @@
 # faCRSA
 A fully automated pipeline for the high-throughput analysis of crop root system architecture. 
 ## Use faCRSA webserver
-❤️ Try faCRSA at https://root.aiphenomics.com/. You can see help documents about faCRSA usage on the Github page (Section 3. Usage) and at https://root.aiphenomics.com/faq.
+❤️ Try faCRSA at https://facrsa.aiphenomics.com/. You can see help documents about faCRSA usage on the Github page (Section 3. Usage).
 ## Deploy faCRSA in a private environment
 ### 1. Installation and launcher
 - faCRSA has been tested under Ubuntu 18.04 LTS, CentOS 7, macOS 12 Monterey, and Windows 10 with Python 3.6.0. 
