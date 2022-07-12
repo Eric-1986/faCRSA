@@ -49,6 +49,7 @@ facrsa-queue
 
 # Create a new cmd window
 # Launch faCRSA web
+conda activate facrsa
 facrsa-web
 ```
 ##### 1.1.3 Open web page
@@ -77,6 +78,7 @@ python huey_consumer.py task_queue.huey
 
 # Create a new cmd window
 # Launch faCRSA web
+conda activate facrsa
 flask run
 ```
 ##### 1.2.4. Open web page
