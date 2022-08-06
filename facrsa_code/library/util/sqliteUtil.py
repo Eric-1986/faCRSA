@@ -83,6 +83,9 @@ class sqliteUtil():
                   `trap` varchar(100) DEFAULT '0',
                   `mrlp` varchar(100) DEFAULT '0',
                   `mrap` varchar(100) DEFAULT '0',
+                  `al` varchar(100) DEFAULT '0',
+                  `ac` varchar(100) DEFAULT '0',
+                  `ar` varchar(100) DEFAULT '0',
                   `status` char(100) NOT NULL DEFAULT 'Error'
                 )
                 """)
@@ -159,26 +162,14 @@ class sqliteUtil():
             self.cursor.execute(sql)
             self.conn.commit()
         except:
-            # 把这些异常保存到一个日志文件中，来分析这些异常
-            # 将错误日志输入到目录文件中
-            # f = open("\log.txt", 'a')
-            # traceback.print_exc(file=f)
-            # f.flush()
-            # f.close()
-            # 如果发生异常，则回滚
             traceback.print_exc()
             self.conn.rollback()
         finally:
-            # 最终关闭数据库连接
             self.cursor.close()
             self.conn.close()
 
     def update(self, sql):
-        '''
-            更新结果集
-        '''
         try:
-            # 执行sql语句
             self.cursor.execute(sql)
             self.conn.commit()
             return str(200)

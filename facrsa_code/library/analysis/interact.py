@@ -25,11 +25,6 @@ class interact():
         return res
 
     def re_img_name(self, folder_str):
-        """
-        恢复上传到cos文件的名字
-        :param folder_str:
-        :return:
-        """
         filelist = os.listdir(folder_str + "initial")
         for img in filelist:
             with sqliteUtil() as um:
@@ -43,21 +38,4 @@ class interact():
         factor = self.info['factor']
         mail = self.info['email']
         private_plugin = self.info['private_plugin']
-
-        # # download private plugin
-        # if str(private_plugin) != '0':
-        #     with sqliteUtil() as um:
-        #         # 检索当前任务对应的自定义插件
-        #         sql = 'SELECT pid FROM plugin WHERE tid=' + str(self.tid)
-        #         res = um.fetch_one(sql)
-        #     # todo 根据数据库信息修改预测时的插件路径
-        #
-        # 解压并重命名文件
-        # process_type：单张（多张）/zip压缩包
-        # if self.process_type == 1:
-        #     file = self.folder_str + self.tid + ".zip"
-        #     fz = zipfile.ZipFile(file, 'r')
-        #     for file in fz.namelist():
-        #         fz.extract(file, self.folder_str + "initial")
-
         return factor, mail, private_plugin

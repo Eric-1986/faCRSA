@@ -81,8 +81,8 @@ def get_plugin_count():
 @app.route('/api/checkUserName', methods=['POST'])
 def check_username():
     username = str(request.form['username'])
-    sql = "SELECT * FROM user  WHERE username = '%s'" % (username)  # 根据用户名查找user表中记录
-    result = sqliteUtil().fetch_one(sql)  # 获取一条记录
+    sql = "SELECT * FROM user  WHERE username = '%s'" % (username)
+    result = sqliteUtil().fetch_one(sql)
     if result:
         return str(200)
     else:
@@ -98,13 +98,11 @@ def user_login():
         password_candidate = request.form['password']
         sql = "SELECT * FROM user  WHERE username = '%s'" % (username)
         result = sqliteUtil().fetch_one(sql)
-        if result:  # 如果查到记录
+        if result:
             salt = "facrsa2022"
-            password = result['password']  # 用户填写的密码
-            # 对比用户填写的密码和数据库中记录密码是否一致
+            password = result['password']
             if password == hashlib.md5(
                     bytes(password_candidate + salt, encoding="utf8")).hexdigest():  # 调用verify方法验证，如果为真，验证通过
-                # 写入session
                 session['logged_in'] = True
                 session['username'] = username
                 session['uid'] = result['uid']
@@ -112,24 +110,24 @@ def user_login():
                     "code": 200,
                     'msg': "success",
                 }
-                # 第一种
-                response = jsonify(data)  # 将python的字典转换为json字符串
+
+                response = jsonify(data)
                 return response
-            else:  # 如果密码错误
+            else:
                 data = {
                     "code": 400,
                     'msg': "error (username / pwd)",
                 }
-                # 第一种
-                response = jsonify(data)  # 将python的字典转换为json字符串
+
+                response = jsonify(data)
                 return response
         else:
             data = {
                 "code": 400,
                 'msg': "user not found",
             }
-            # 第一种
-            response = jsonify(data)  # 将python的字典转换为json字符串
+
+            response = jsonify(data)
             return response
 
 

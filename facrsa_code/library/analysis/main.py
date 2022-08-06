@@ -13,12 +13,6 @@ from facrsa_code.library.analysis import interact
 
 
 def web_action(uid, tid):
-    """
-    :param uid:
-    :param tid:
-    :param process_type: 单张图像 / zip压缩包
-    :return:
-    """
     data_interact = interact.interact(uid, tid, 0)
     factor, mail, private_plugin = data_interact.initial_analysis()
     conf = config.return_config(factor, mail, private_plugin, uid, tid)

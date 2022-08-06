@@ -18,7 +18,7 @@ from facrsa_code.library.util.sqliteUtil import sqliteUtil
 def csv_to_mysql(file_name, tid, user):
     data = pd.read_csv(file_name)
     data = data.astype(object).where(pd.notnull(data), None)
-    for image, re_img, trl, trpa, tsa, trv, mrl, mrpa, msa, mrv, cha, mrd in zip(
+    for image, re_img, trl, trpa, tsa, trv, mrl, mrpa, msa, mrv, cha, mrd, al, ac, ar in zip(
             data['Image_Name'],
             data['Image_Name'],
             data['Total_Root_Length(cm)'],
@@ -30,10 +30,13 @@ def csv_to_mysql(file_name, tid, user):
             data['Primary_Root_Surface_Area(cm2)'],
             data['Primary_Root_Volume(cm3)'],
             data['Convex_Hull_Area(cm2)'],
-            data['Max_Root_Depth(cm)']):
+            data['Max_Root_Depth(cm)'],
+            data['Angle_Left(°)'],
+            data['Angle_Center(°)'],
+            data['Angle_Right(°)']):
         try:
-            insertsql = "insert into result(trl, trpa, tsa, trv, mrl, mrpa, msa, mrv, cha, mrd, tid, image, rid) values('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s')" % (
-                trl, trpa, tsa, trv, mrl, mrpa, msa, mrv, cha, mrd, tid, image, 'b'+str(time.time()) +"*-" + str(image))
+            insertsql = "insert into result(trl, trpa, tsa, trv, mrl, mrpa, msa, mrv, cha, mrd, al, ac, ar, tid, image, rid) values('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s')" % (
+                trl, trpa, tsa, trv, mrl, mrpa, msa, mrv, cha, mrd, al, ac, ar, tid, image, 'b'+str(time.time()) +"*-" + str(image))
             sqliteUtil().insert(insertsql)
         except Exception as e:
             logging.error(e)

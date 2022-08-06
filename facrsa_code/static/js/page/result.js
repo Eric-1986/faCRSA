@@ -88,6 +88,24 @@ layui.use('table', function () {
                 align: 'center',
                 sort: true
             }, {
+                field: 'al',
+                title: 'Angle_Left(°)',
+                width: 180,
+                align: 'center',
+                sort: true
+            }, {
+                field: 'ac',
+                title: 'Angle_Center(°)',
+                width: 180,
+                align: 'center',
+                sort: true
+            }, {
+                field: 'ar',
+                title: 'Angle_Right(°)',
+                width: 180,
+                align: 'center',
+                sort: true
+            }, {
                 field: 'mrd',
                 title: 'Max Root Depth(cm)',
                 width: 180,

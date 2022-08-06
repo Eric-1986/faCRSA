@@ -3,7 +3,7 @@
 '''
 Author: Ruinan Zhang
 Version: v1.2
-LastEditTime: 2022-07-01 09:37:00
+LastEditTime: 2022-07-06 16:14:06
 E-mail: 2020801253@stu.njau.edu.cn
 Copyright (c) 2022 by Ruinan Zhang, All Rights Reserved. Licensed under the GPL v3.0.
 '''

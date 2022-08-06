@@ -32,4 +32,4 @@ def send_mail_user(msg, conf):
         yagmail_server.send(to=email_name, subject=email_title, contents=email_content)
         yagmail_server.close()
     except BaseException as e:
-        logging.error(e)
+        logging.error("Please set SMTP information!")
