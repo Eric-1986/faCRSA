@@ -30,8 +30,7 @@
 # faCRSA
 
 A fully automated pipeline for the high-throughput analysis of crop root system architecture. 
-
-![图片1](D:\UserData\Desktop\图片1.png)
+![pipeline](https://user-images.githubusercontent.com/71422762/183272665-4d23a7fd-d7f2-4851-abc0-53eabeec5f9e.png)
 
 ## Use faCRSA webserver
 
