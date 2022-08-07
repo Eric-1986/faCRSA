@@ -31,6 +31,8 @@
 
 A fully automated pipeline for the high-throughput analysis of crop root system architecture. 
 
+![图片1](D:\UserData\Desktop\图片1.png)
+
 ## Use faCRSA webserver
 
 ❤️ Try faCRSA at https://facrsa.aiphenomics.com/. You can see help documents about faCRSA usage on the Github page (Section 3. Usage).
@@ -114,7 +116,7 @@ Copy the URL address (e.g. http://127.0.0.1:5000/) output from the cmd window an
 
 When you visit the web page for the first time, it will automatically jump to the initialization page. You can set  SMTP server information in this page, which used to notify task status. If you don't need this function, please click the following link to skip.
 
-![image](https://user-images.githubusercontent.com/71422762/176860754-d8852989-2000-4419-82f0-e0e7a17cfbec.png)
+<img src="https://user-images.githubusercontent.com/71422762/176860754-d8852989-2000-4419-82f0-e0e7a17cfbec.png" alt="image" style="zoom:82%;" />
 
 ## Usage
 
