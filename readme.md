@@ -23,7 +23,7 @@
     + [1. Private plugin](#1-private-plugin)
       - [Development guide](#development-guide)
     + [2 Training model](#2-training-model)
-  * [Update](#update) (2022.08.06)
+  * [Update](#update) (2022.08.06 <code>Alpha</code> Version)
   * [Contact](#contact)
 
 # faCRSA
@@ -189,7 +189,7 @@ RootSeg could be trained for images from other crops and imaging backgrounds.
 
 ## Update
 
-- Support to measure root  angle.
+- Support to measure root  angle (<code>Alpha</code> Version).
 - ![angle](https://user-images.githubusercontent.com/71422762/183234733-7ff22856-bd73-4813-a838-4210c5ae3e02.png)
 - Fix several bugs.
 - Increase the speed of analysis.
