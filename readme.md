@@ -23,7 +23,7 @@
     + [1. Private plugin](#1-private-plugin)
       - [Development guide](#development-guide)
     + [2 Training model](#2-training-model)
-  * [Update](#update) (2022.08.06 <code>Alpha</code> Version)
+  * [Update](#update) (2022.08.21)
   * [TODO](#todo)
   * [Contact](#contact)
 
@@ -184,17 +184,26 @@ The deep learning model must be constructed by Kears in Tensorflow (code: <code>
 
 RootSeg could be trained for images from other crops and imaging backgrounds.
 
-1. Download the model package.
-2. Unzip the package and load model into your training script.
-3. Generate training data.
+1. Download the model folder (<code>faCRSA/RootSeg</code>) and unzip the package.
+2. Use the produce_train_txt script to generate a training file that includes image paths.
+3. Open the train script and set customized parameters, such as learning rate, training epoch and date folder.
 4. Switch to the training environment (e.g. facrsa) and start model training.
 
 ## Update
 
-- Support to measure root  angle (<code>Alpha</code> Version).
-- ![angle](https://user-images.githubusercontent.com/71422762/183234733-7ff22856-bd73-4813-a838-4210c5ae3e02.png) 
-- Fix several bugs.
-- Increase the speed of analysis.
+- 2022.08.21
+
+  1. Add the model training scripts for users to easily train the model.
+
+- 2022.08.06 <code>Alpha</code> Version
+
+  1. Support to measure root  angle (<code>Alpha</code> Version).
+
+  - ![angle](https://user-images.githubusercontent.com/71422762/183234733-7ff22856-bd73-4813-a838-4210c5ae3e02.png) 
+
+  2. Fix several bugs.
+
+  3. Increase the speed of analysis.
 
 ## TODO
 
