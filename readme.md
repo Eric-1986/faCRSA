@@ -195,7 +195,7 @@ RootSeg could be trained for images from other crops and imaging backgrounds.
 
   1. Add the model training scripts for users to easily train the model.
 
-- 2022.08.06 <code>Alpha</code> Version
+- 2022.08.06
 
   1. Support to measure root  angle (<code>Alpha</code> Version).
 
