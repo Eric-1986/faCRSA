@@ -23,7 +23,7 @@
     + [1. Private plugin](#1-private-plugin)
       - [Development guide](#development-guide)
     + [2 Training model](#2-training-model)
-  * [Update](#update) (2022.08.21)
+  * [Update](#update) (2022.08.22)
   * [TODO](#todo)
   * [Contact](#contact)
 
@@ -190,6 +190,10 @@ RootSeg could be trained for images from other crops and imaging backgrounds.
 4. Switch to the training environment (e.g. facrsa) and start model training.
 
 ## Update
+
+- 2022.08.22
+
+  1. Merge a horizontally flipped image with the initial masked image to improve segment accuracy.
 
 - 2022.08.21
 
