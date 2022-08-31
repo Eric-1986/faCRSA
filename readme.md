@@ -194,6 +194,8 @@ RootSeg could be trained for images from other crops and imaging backgrounds.
 - 2022.08.31
 
   1. Fix abnormal program operation caused by file name.
+  1. Fix task failure causing queue termination.
+  1. Add an update notification on the home page.
 
 - 2022.08.22
 
