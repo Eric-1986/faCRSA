@@ -3,11 +3,23 @@
     architecture.{% endblock %}
 {% block index %}
     <header class="bg-dark py-5">
+        {% if update %}
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center justify-content-center">
+                    <div class="alert alert-success" style="width:40%;text-align: center">
+                        <a href="https://github.com/zrnupping/faCRSA#update" style="text-decoration:none"><strong>New
+                            version!</strong> Click here to view more information.</a>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
         <div class="container px-5">
             <div class="row gx-5 align-items-center justify-content-center">
+
                 <div class="col-lg-8 col-xl-7 col-xxl-6">
                     <div class="my-5 text-center text-xl-start">
-                        <h1 class="display-5 fw-bolder text-white mb-2">faCRSA
+                        <h1 class="display-5 fw-bolder text-white mb-2">
+                            faCRSA
                         </h1>
                         <p class="lead fw-normal text-white-50">
                             We represent the following functions to researchers.
