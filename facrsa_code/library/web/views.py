@@ -10,7 +10,7 @@ Copyright (c) 2022 by Ruinan Zhang, All Rights Reserved. Licensed under the GPL 
 import uuid
 
 from flask import render_template, session, redirect
-from facrsa_code.library.web.dataApi import get_task_info, get_plugin_count
+from facrsa_code.library.web.dataApi import get_task_info, get_plugin_count, check_update
 from facrsa_code.library.util.sqliteUtil import sqliteUtil
 from facrsa_code import app
 import traceback
@@ -21,7 +21,10 @@ import os
 def index_page():
     if os.path.exists(os.path.join(os.path.dirname(os.path.realpath(__file__)), "install.lock")):
         uid, user = get_info()
-        return render_template("index.html", uid=uid, user=user)
+        if check_update() == 1:
+            return render_template("index.html", uid=uid, user=user, update=1)
+        else:
+            return render_template("index.html", uid=uid, user=user)
     return redirect('/initial')
 
 

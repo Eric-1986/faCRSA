@@ -18,8 +18,11 @@ import hashlib
 import datetime
 import json
 import os
+
+os.environ['NO_PROXY'] = 'facrsa.aiphenomics.com'
 import uuid
 import sys
+import requests
 
 os.path.join(os.path.dirname(__file__), '../../../')
 sys.path.append(os.path.join(os.path.dirname(__file__), '../../../'))
@@ -471,3 +474,8 @@ def allowed_file(filename):
     ALLOWED_EXTENSIONS = ['jpg', 'png', 'zip']
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+
+def check_update():
+    check_res = requests.get(url="https://facrsa.aiphenomics.com/update.json")
+    return check_res.json()['update']
