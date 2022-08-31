@@ -10,6 +10,7 @@ Copyright (c) 2022 by Ruinan Zhang, All Rights Reserved. Licensed under the GPL 
 from facrsa_code.library.util.sqliteUtil import sqliteUtil
 import zipfile
 import os
+import random
 from pathlib import Path
 
 
@@ -25,14 +26,19 @@ class interact():
         return res
 
     def re_img_name(self, folder_str):
-        filelist = os.listdir(folder_str + "initial")
-        for img in filelist:
+        file_list = os.listdir(folder_str + "initial")
+        for img in file_list:
             with sqliteUtil() as um:
                 sql = 'SELECT image FROM result WHERE re_img = ' + '"' + img + '"' + 'and tid=' + self.tid
                 res = um.fetch_one(sql)
             original = folder_str + "initial/" + img
-            rename = folder_str + "initial/" + res['image']
-            os.rename(original, rename)
+            temp_name = folder_str + "initial/" + res['image']
+            try:
+                rename = temp_name
+                os.rename(original, rename)
+            except FileExistsError:
+                rename_random = temp_name + "_" + str(random.randint(1, 100)) + ".jpg"
+                os.rename(original, rename_random)
 
     def initial_analysis(self):
         factor = self.info['factor']
